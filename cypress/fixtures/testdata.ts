@@ -1,10 +1,6 @@
 export module TestDataObject {
   export const dataSet = [
-    { userName: 'test1234', password: 'password1' },
-    { userName: 'test7890', password: 'password2' }
-  ]
-  export const dataSet1 = [
-    { userName: ('env:userName1'), password: 'password1' },
-    { userName: 'test7890', password: 'password2' }
+    { userName: Cypress.env('userName1'), password: Cypress.env('password1') },
+    { userName: Cypress.env('userName2'), password: Cypress.env('password2') }
   ]
 };
